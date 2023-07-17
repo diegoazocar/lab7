@@ -19,6 +19,12 @@ int *bubbleSort(int arr[], int n, int numSwaps[])
                 swapped = 1;
             }
         }
+        printf("Iteration %d: \n", j);
+        for (int a = 0; a < n; a++)
+        {
+            printf("%d ", arr[a]);
+        }
+        printf("\n");
         numSwaps[i] = c;
         c = 0;
 
@@ -30,7 +36,7 @@ int *bubbleSort(int arr[], int n, int numSwaps[])
 
 int main()
 {
-    int arr[] = {97, 16, 45, 63, 13, 22, 7, 58, 72};
+    int arr[] = {12, 2, 8, 19, 13, 7, 1, 16};
     int numSwaps[sizeof(arr)];
     int n = sizeof(arr) / sizeof(arr[0]);
     int *ans = bubbleSort(arr, n, numSwaps);
